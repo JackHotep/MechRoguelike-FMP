@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float vertClamp = 70f;
 
     private CharacterController charCon;
-    private new Camera camera;
+    private Camera camera;
     private PlayerInputManager inputMan;
     private Vector3 movementCurrent = Vector3.zero;
     private float vertRot;
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         ViewManager();
     }
 
-    private void MovementManager()
+    void MovementManager()
     {
         float speed = moveSpeed * (inputMan.Boost > 0 ? boostMult : 1f);
         
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         charCon.Move(movementCurrent * Time.deltaTime);
     }
 
-    private void JumpManager()
+    void JumpManager()
     {
         if (charCon.isGrounded)
         {
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void ViewManager()
+    void ViewManager()
     {
         float xRot = inputMan.Look.x * aimSens;
         transform.Rotate(0, xRot, 0);
