@@ -21,6 +21,6 @@ MonoBehaviour:
   spawnPoint: {x: 0.5631, y: -0.021, z: 0}
   spawnRot: {x: 0, y: 0, z: 0}
   flashDuration: 1
-  damageValue: 21
+  damageValue: 16
   weaponConfig: {fileID: 11400000, guid: 3f58f467fd46fda43b5735b8d4b858e0, type: 2}
   trailConfig: {fileID: 11400000, guid: b09749e4a75de8644a904e8adc159eef, type: 2}

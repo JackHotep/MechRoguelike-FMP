@@ -14,6 +14,9 @@ public class TestDummy : MonoBehaviour, IDamageable
     public float Shield { get; set; }
     public float ShieldCurrent { get; set; }
     
+    [SerializeField] private float healthStart = 10000f;
+    [SerializeField] private float shieldStart = 10000f;
+    
     public ElementType hullType = ElementType.Kinetic;
     public ElementType shieldType = ElementType.Kinetic;
 
@@ -30,8 +33,8 @@ public class TestDummy : MonoBehaviour, IDamageable
     
     private void Start()
     {
-        Health = 2000;
-        Shield = 2000;
+        Health = healthStart;
+        Shield = shieldStart;
         HealthCurrent = Health;
         ShieldCurrent = Shield;
     }
@@ -71,7 +74,7 @@ public class TestDummy : MonoBehaviour, IDamageable
 
     public void Death()
     {
-        throw new System.NotImplementedException();
+        Destroy(gameObject);
     }
 
 
@@ -131,29 +134,26 @@ public class TestDummy : MonoBehaviour, IDamageable
         {
             case ElementType.Kinetic:
                 GameObject damageTextInstanceK = Instantiate(damageTextKinetic, transform);
-                damageTextInstanceK.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(roundedDamage.ToString());
-                LookAtConstraint lookAtK = damageTextInstanceK.transform.GetComponent<LookAtConstraint>();
-                lookAtK.AddSource(new ConstraintSource()
-                    { sourceTransform = Camera.main.transform, weight = 1f });
-                lookAtK.constraintActive = true;
+                var dmgTextK = damageTextInstanceK.transform.GetChild(0).GetComponent<TMP_Text>();
+                dmgTextK.SetText("<color=#FF8A00>" + roundedDamage.ToString());
+                damageTextInstanceK.transform.LookAt(2* transform.position - Camera.main.transform.position);
                 break;
             
             case ElementType.Electric:
                 GameObject damageTextInstanceE = Instantiate(damageTextElectric, transform);
-                damageTextInstanceE.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(roundedDamage.ToString());
-                LookAtConstraint lookAtE = damageTextInstanceE.transform.GetComponent<LookAtConstraint>();
-                lookAtE.AddSource(new ConstraintSource()
-                    { sourceTransform = Camera.main.transform, weight = 1f });
-                lookAtE.constraintActive = true;
+                var dmgTextE = damageTextInstanceE.transform.GetChild(0).GetComponent<TMP_Text>();
+                dmgTextE.SetText("<color=#00E3FF>" + roundedDamage.ToString());
+                damageTextInstanceE.transform.LookAt(2* transform.position - Camera.main.transform.position);
                 break;
             
             case ElementType.Plasma:
                 GameObject damageTextInstanceP = Instantiate(damageTextPlasma, transform);
-                damageTextInstanceP.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(roundedDamage.ToString());
-                LookAtConstraint lookAtP = damageTextInstanceP.transform.GetComponent<LookAtConstraint>();
-                lookAtP.AddSource(new ConstraintSource()
-                    { sourceTransform = Camera.main.transform, weight = 1f });
-                lookAtP.constraintActive = true;
+                var dmgTextP = damageTextInstanceP.transform.GetChild(0).GetComponent<TMP_Text>();
+                dmgTextP.SetText("<color=#FF0073>" + roundedDamage.ToString());
+                damageTextInstanceP.transform.LookAt(2* transform.position - Camera.main.transform.position);
+                break;
+            default:
+                Debug.Log("Damage processing error");
                 break;
         }
     }
