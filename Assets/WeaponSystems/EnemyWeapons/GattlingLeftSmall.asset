@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff25d55cd44c1a46a021105859eeb9e, type: 3}
+  m_Name: GattlingLeftSmall
+  m_EditorClassIdentifier: 
+  weaponTypeL: 0
+  weaponTypeR: 2
+  elementType: 0
+  label: Gattling Gun
+  description: <Placeholder>
+  model: {fileID: 7977454719015434275, guid: b255c72e0386f1347a796016b32cdfe4, type: 3}
+  spawnPoint: {x: 0.3046002, y: 0.007071853, z: 1.0969}
+  spawnRot: {x: -90, y: -265, z: 16.5}
+  weaponConfig: {fileID: 11400000, guid: 39bd97b67010bfb4da3b4d3274820ec3, type: 2}
+  trailConfig: {fileID: 11400000, guid: b23f3228f7a6ca74a88cf17a832775b3, type: 2}

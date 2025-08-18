@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff25d55cd44c1a46a021105859eeb9e, type: 3}
+  m_Name: LaserHMGLeft
+  m_EditorClassIdentifier: 
+  weaponTypeL: 1
+  weaponTypeR: 2
+  elementType: 2
+  label: Heavy Laser Weapon
+  description: <Placeholder>
+  model: {fileID: 3842483742177197885, guid: 72e16b11cbea67d4c86c53418071666a, type: 3}
+  spawnPoint: {x: -0.5631, y: -0.021, z: 0}
+  spawnRot: {x: 0, y: 0, z: 0}
+  flashDuration: 1
+  damageValue: 21
+  weaponConfig: {fileID: 11400000, guid: 3f58f467fd46fda43b5735b8d4b858e0, type: 2}
+  trailConfig: {fileID: 11400000, guid: b09749e4a75de8644a904e8adc159eef, type: 2}
