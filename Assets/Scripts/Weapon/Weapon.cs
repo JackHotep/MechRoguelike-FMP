@@ -28,7 +28,7 @@ public class Weapon : ScriptableObject
     private MonoBehaviour activeBehaviour;
     private GameObject modelInst;
     private float lastShot;
-    private VisualEffect shotSyst;
+    public VisualEffect shotSyst;
     private GameObject muzzleFlash;
     private ObjectPool<TrailRenderer> trailPool;
 

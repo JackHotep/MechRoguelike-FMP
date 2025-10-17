@@ -5,6 +5,7 @@ using System.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.UI;
 
 [DisallowMultipleComponent]
 public class PlayerController : MonoBehaviour, IDamageable
@@ -42,6 +43,15 @@ public class PlayerController : MonoBehaviour, IDamageable
     private Vector3 movementCurrent = Vector3.zero;
     private float vertRot;
 
+    private Color crosshairInvis;
+    private Color crosshairVisible;
+    
+    [SerializeField] private Image activeCrosshairLeft;
+    [SerializeField] private Image activeCrosshairRight;
+    [SerializeField] private Sprite crosshairGattling;
+    [SerializeField] private Sprite crosshairLaserHMG;
+    
+    
     [SerializeField] private Transform leftWeaponSlot;
     [SerializeField] private Transform rightWeaponSlot;
     [SerializeField] private LeftWeaponType weaponTypeLeft = LeftWeaponType.Gattling;
@@ -86,6 +96,9 @@ public class PlayerController : MonoBehaviour, IDamageable
 
         slotL.Spawn(leftWeaponSlot, this);
         slotR.Spawn(rightWeaponSlot, this);
+
+        crosshairInvis = new Color(1f, 1f, 1f, 0f);
+        crosshairVisible = new Color(1f, 1f, 1f, 1f);
     }
 /*
     private IEnumerator StartRoutine()
@@ -113,6 +126,7 @@ public class PlayerController : MonoBehaviour, IDamageable
         MovementManager();
         ViewManager();
         FireWeapon();
+        UpdateCrosshair();
     }
 
     private void MovementManager()
@@ -167,6 +181,54 @@ public class PlayerController : MonoBehaviour, IDamageable
         }
     }
 
+    private void UpdateCrosshair()
+    {
+        // Left
+        CrosshairCalc(activeLeft, activeCrosshairLeft);
+        // Right
+        CrosshairCalc(activeRight, activeCrosshairRight);
+    }
+
+    private void CrosshairCalc(Weapon weapon, Image activeCrosshair)
+    {
+        if (activeCrosshair)
+        {
+            activeCrosshair.color = crosshairVisible;
+            switch (weapon.weaponTypeL)
+                    {
+                        case LeftWeaponType.Gattling: activeCrosshair.GetComponent<Image>().sprite = crosshairGattling; break;
+                        case LeftWeaponType.LaserHMG: activeCrosshair.GetComponent<Image>().sprite = crosshairLaserHMG; break;
+                        case LeftWeaponType.Null:
+                            switch (weapon.weaponTypeR)
+                            {
+                                case RightWeaponType.Gattling: activeCrosshair.GetComponent<Image>().sprite = crosshairGattling; break;
+                                case RightWeaponType.LaserHMG: activeCrosshair.GetComponent<Image>().sprite = crosshairLaserHMG; break;
+                                case RightWeaponType.Null: activeCrosshair.color = crosshairInvis; break;
+                                default: Debug.Log("Crosshair Error! Failed at - Right Check"); activeCrosshair.color = crosshairInvis; break;
+                            }
+                            break;
+                        default: Debug.Log("Crosshair Error! Failed at - Left Check"); activeCrosshair.color = crosshairInvis; break;
+                    }
+        }
+        
+        
+        Vector3 gunPoint = weapon.shotSyst.transform.position;
+        Vector3 gunForward = weapon.shotSyst.transform.forward;
+        Vector3 hitDest = gunPoint + gunForward * 100;
+
+        if (Physics.Raycast(gunPoint, gunForward, out RaycastHit hit, float.MaxValue, weapon.weaponConfig.targetMask))
+        {
+            hitDest = hit.point;
+        }
+
+        Vector3 screenSpaceLoc = camera.WorldToScreenPoint(hitDest);
+        if (activeCrosshair != null && RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                (RectTransform)activeCrosshair.transform.parent, screenSpaceLoc, null, out Vector2 localPoint))
+        {
+            activeCrosshair.rectTransform.anchoredPosition = localPoint;
+        }
+        else { activeCrosshair.rectTransform.anchoredPosition = Vector2.zero; }
+    }
 
     public void Damage(float damage, ElementType damageType)
     {
