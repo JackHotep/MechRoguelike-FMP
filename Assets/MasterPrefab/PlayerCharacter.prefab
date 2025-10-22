@@ -27,7 +27,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.53, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4015132060938683970}
   - {fileID: 8941256891617263402}
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1794
+  m_VersionIndex: 1830
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 829
+  m_VersionIndex: 865
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1991,7 +1991,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1054
+  m_VersionIndex: 1090
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1255
+  m_VersionIndex: 1291
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2704,7 +2704,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1177
+  m_VersionIndex: 1213
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2910,7 +2910,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5489
+  m_VersionIndex: 5525
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3267,7 +3267,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3301
+  m_VersionIndex: 3343
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3334,7 +3334,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3622,7 +3622,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3345
+  m_VersionIndex: 3381
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3977,7 +3977,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1093
+  m_VersionIndex: 1129
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4258,7 +4258,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5221
+  m_VersionIndex: 5257
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4646,7 +4646,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1255
+  m_VersionIndex: 1291
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5104,7 +5104,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2133
+  m_VersionIndex: 2169
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5459,7 +5459,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2197
+  m_VersionIndex: 2233
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5592,8 +5592,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6458949651107253734}
   - {fileID: 2287194054758540836}
@@ -5615,6 +5615,7 @@ GameObject:
   - component: {fileID: 4012330763345265531}
   - component: {fileID: 8661828442386451990}
   - component: {fileID: 3995004063771872329}
+  - component: {fileID: 4552172645017489698}
   m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5631,9 +5632,9 @@ Transform:
   m_GameObject: {fileID: 4617659688873507478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 757377908582290732}
   - {fileID: 4535438840220403891}
@@ -5745,6 +5746,34 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &4552172645017489698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4617659688873507478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd5e5ddd242bd64581fb5ed9c0e0507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Polybrush::UnityEngine.Polybrush.PolybrushMesh
+  m_PolyMesh:
+    name: 
+    vertices: []
+    normals: []
+    colors: []
+    tangents: []
+    uv0: []
+    uv1: []
+    uv2: []
+    uv3: []
+    m_Triangles: 
+    m_SubMeshes: []
+    m_Mesh: {fileID: 0}
+  m_SkinMeshRef: {fileID: 0}
+  m_OriginalMeshObject: {fileID: 0}
+  m_Mode: 0
 --- !u!1 &4972150913666692498
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,6 +5786,7 @@ GameObject:
   - component: {fileID: 7438439757691849948}
   - component: {fileID: 8698692678192511325}
   - component: {fileID: 563069432895060960}
+  - component: {fileID: 474621179132059883}
   m_Layer: 9
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -5799,8 +5829,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.7
+  m_Height: 3
+  m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -5818,7 +5848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d61e4b541ece04d81554c0499fa20d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   boostMult: 2
   jumpPower: 3
   grav: 9.81
@@ -5860,6 +5890,34 @@ MonoBehaviour:
   shieldType: 0
   leftWeapon: {fileID: 0}
   rightWeapon: {fileID: 0}
+--- !u!114 &474621179132059883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4972150913666692498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd5e5ddd242bd64581fb5ed9c0e0507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Polybrush::UnityEngine.Polybrush.PolybrushMesh
+  m_PolyMesh:
+    name: 
+    vertices: []
+    normals: []
+    colors: []
+    tangents: []
+    uv0: []
+    uv1: []
+    uv2: []
+    uv3: []
+    m_Triangles: 
+    m_SubMeshes: []
+    m_Mesh: {fileID: 0}
+  m_SkinMeshRef: {fileID: 0}
+  m_OriginalMeshObject: {fileID: 0}
+  m_Mode: 0
 --- !u!1 &5093322131962736159
 GameObject:
   m_ObjectHideFlags: 0
@@ -6062,7 +6120,25 @@ MonoBehaviour:
   - {x: -0.99366647, y: -0.11237002, z: 0, w: -1}
   - {x: -0.99366647, y: -0.11237002, z: 0, w: -1}
   - {x: -0.99366647, y: -0.11237002, z: 0, w: -1}
-  m_Colors: []
+  m_Colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
   m_UnwrapParameters:
     m_HardAngle: 88
     m_PackMargin: 20
@@ -6071,7 +6147,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1368
+  m_VersionIndex: 1410
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6426,7 +6502,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2575
+  m_VersionIndex: 2611
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6896,7 +6972,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4171
+  m_VersionIndex: 4207
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7253,7 +7329,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1541
+  m_VersionIndex: 1577
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7638,7 +7714,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4369
+  m_VersionIndex: 4405
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7995,7 +8071,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1093
+  m_VersionIndex: 1129
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8252,6 +8328,7 @@ GameObject:
   - component: {fileID: 8602068887828472552}
   - component: {fileID: 5218234994040657522}
   - component: {fileID: 1503237455597408529}
+  - component: {fileID: 4732776476202131335}
   m_Layer: 8
   m_Name: Right Holder
   m_TagString: Untagged
@@ -8449,7 +8526,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1368
+  m_VersionIndex: 1407
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8556,6 +8633,108 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4732776476202131335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8346270484872797733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd5e5ddd242bd64581fb5ed9c0e0507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Polybrush::UnityEngine.Polybrush.PolybrushMesh
+  m_PolyMesh:
+    name: PolybrushMesh-1652
+    vertices:
+    - {x: -0.093128204, y: -0.14999998, z: -0.31335014}
+    - {x: 0.32376814, y: -0.10285473, z: -0.31335014}
+    - {x: 0, y: 0.21647727, z: -0.31335014}
+    - {x: 0.32376814, y: -0.10285473, z: -0.31335014}
+    - {x: 0.32376814, y: -0.10285473, z: 0.066296265}
+    - {x: 0, y: 0.21647727, z: -0.31335014}
+    - {x: 0, y: 0.21647727, z: 0.066296265}
+    - {x: 0.32376814, y: -0.10285473, z: 0.066296265}
+    - {x: -0.093128204, y: -0.14999998, z: 0.066296265}
+    - {x: 0, y: 0.21647727, z: 0.066296265}
+    - {x: -0.093128204, y: -0.14999998, z: 0.066296265}
+    - {x: -0.093128204, y: -0.14999998, z: -0.31335014}
+    - {x: 0, y: 0.21647727, z: 0.066296265}
+    - {x: 0, y: 0.21647727, z: -0.31335014}
+    - {x: -0.093128204, y: -0.14999998, z: -0.31335014}
+    - {x: 0.32376814, y: -0.10285473, z: -0.31335014}
+    - {x: -0.093128204, y: -0.14999998, z: 0.066296265}
+    - {x: 0.32376814, y: -0.10285473, z: 0.066296265}
+    normals:
+    - {x: 0, y: 0, z: -1}
+    - {x: 0, y: 0, z: -1}
+    - {x: 0, y: 0, z: -1}
+    - {x: 0.70221245, y: 0.7119675, z: 0}
+    - {x: 0.70221245, y: 0.7119675, z: 0}
+    - {x: 0.70221245, y: 0.7119675, z: 0}
+    - {x: 0.70221245, y: 0.7119675, z: 0}
+    - {x: 0, y: 0, z: 1}
+    - {x: 0, y: 0, z: 1}
+    - {x: 0, y: 0, z: 1}
+    - {x: -0.9691963, y: 0.24628954, z: 0}
+    - {x: -0.9691963, y: 0.24628954, z: 0}
+    - {x: -0.9691963, y: 0.24628954, z: 0}
+    - {x: -0.9691963, y: 0.24628954, z: 0}
+    - {x: 0.112370014, y: -0.9936664, z: 0}
+    - {x: 0.112370014, y: -0.9936664, z: 0}
+    - {x: 0.112370014, y: -0.9936664, z: 0}
+    - {x: 0.112370014, y: -0.9936664, z: 0}
+    colors: []
+    tangents:
+    - {x: 1, y: 0, z: 0, w: -1}
+    - {x: 1, y: 0, z: 0, w: -1}
+    - {x: 1, y: 0, z: 0, w: -1}
+    - {x: 0.7119675, y: -0.70221245, z: 0, w: -1}
+    - {x: 0.7119675, y: -0.70221245, z: 0, w: -1}
+    - {x: 0.7119675, y: -0.70221245, z: 0, w: -1}
+    - {x: 0.7119675, y: -0.70221245, z: 0, w: -1}
+    - {x: -1, y: 0, z: 0, w: -1}
+    - {x: -1, y: 0, z: 0, w: -1}
+    - {x: -1, y: 0, z: 0, w: -1}
+    - {x: 0, y: 0, z: -1, w: -1}
+    - {x: 0, y: 0, z: -1, w: -1}
+    - {x: 0, y: 0, z: -1, w: -1}
+    - {x: 0, y: 0, z: -1, w: -1}
+    - {x: -0.99366647, y: -0.11237002, z: 0, w: -1}
+    - {x: -0.99366647, y: -0.11237002, z: 0, w: -1}
+    - {x: -0.99366647, y: -0.11237002, z: 0, w: -1}
+    - {x: -0.99366647, y: -0.11237002, z: 0, w: -1}
+    uv0:
+    - {x: -0.093128204, y: -0.14999998, z: 0, w: 0}
+    - {x: 0.32376814, y: -0.10285473, z: 0, w: 0}
+    - {x: 0, y: 0.21647727, z: 0, w: 0}
+    - {x: 0.30273828, y: -0.31335014, z: 0, w: 0}
+    - {x: 0.30273828, y: 0.066296265, z: 0, w: 0}
+    - {x: -0.15201303, y: -0.31335014, z: 0, w: 0}
+    - {x: -0.15201303, y: 0.066296265, z: 0, w: 0}
+    - {x: -0.32376814, y: -0.10285473, z: 0, w: 0}
+    - {x: 0.093128204, y: -0.14999998, z: 0, w: 0}
+    - {x: 0, y: 0.21647727, z: 0, w: 0}
+    - {x: -0.066296265, y: -0.16831593, z: 0, w: 0}
+    - {x: 0.31335014, y: -0.16831593, z: 0, w: 0}
+    - {x: -0.066296265, y: 0.20980898, z: 0, w: 0}
+    - {x: 0.31335014, y: 0.20980898, z: 0, w: 0}
+    - {x: 0.109393865, y: -0.31335014, z: 0, w: 0}
+    - {x: -0.31015974, y: -0.31335014, z: 0, w: 0}
+    - {x: 0.109393865, y: 0.066296265, z: 0, w: 0}
+    - {x: -0.31015974, y: 0.066296265, z: 0, w: 0}
+    uv1: []
+    uv2: []
+    uv3: []
+    m_Triangles: 0200000001000000000000000500000004000000030000000500000006000000040000000900000008000000070000000c0000000b0000000a0000000c0000000d0000000b0000000e0000000f000000100000000f0000001100000010000000
+    m_SubMeshes:
+    - m_Indexes: 0200000001000000000000000500000004000000030000000500000006000000040000000900000008000000070000000c0000000b0000000a0000000c0000000d0000000b0000000e0000000f000000100000000f0000001100000010000000
+      m_Topology: 0
+    m_Mesh: {fileID: 0}
+  m_SkinMeshRef: {fileID: 0}
+  m_OriginalMeshObject: {fileID: 0}
+  m_Mode: 0
 --- !u!1 &8468771297109274383
 GameObject:
   m_ObjectHideFlags: 0
@@ -8804,7 +8983,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2542
+  m_VersionIndex: 2578
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9159,7 +9338,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 501
+  m_VersionIndex: 537
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9514,7 +9693,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3301
+  m_VersionIndex: 3337
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10851,7 +11030,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1054
+  m_VersionIndex: 1090
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11284,7 +11463,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3345
+  m_VersionIndex: 3387
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11351,7 +11530,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
