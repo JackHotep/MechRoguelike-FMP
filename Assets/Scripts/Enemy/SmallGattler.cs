@@ -7,7 +7,7 @@ public class SmallGattler : EnemyBase, IDamageable
     
     [SerializeField] private new Transform leftWeaponSlot;
     [SerializeField] private new Transform rightWeaponSlot;
-    [SerializeField] private new LeftWeaponType weaponTypeLeft = LeftWeaponType.Gattling;
-    [SerializeField] private new RightWeaponType weaponTypeRight = RightWeaponType.Gattling;
+    [SerializeField] private new EnemyLeftWeaponType weaponTypeLeft = EnemyLeftWeaponType.Gattling;
+    [SerializeField] private new EnemyRightWeaponType weaponTypeRight = EnemyRightWeaponType.Gattling;
     
 }

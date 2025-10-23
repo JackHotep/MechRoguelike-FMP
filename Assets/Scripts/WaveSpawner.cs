@@ -13,6 +13,8 @@ public class WaveSpawner : MonoBehaviour
     private float waveTimer;
     private float spawnInterval;
     private float spawnTimer;
+
+    private float spawnRange;
     
     void Start()
     {
@@ -26,7 +28,7 @@ public class WaveSpawner : MonoBehaviour
         {
             if (enemiesSpawning.Count > 0)
             {
-                Instantiate(enemiesSpawning[0], spawnPoints[Random.Range(0, spawnPoints.Count)].position,
+                Instantiate(enemiesSpawning[0], FindSpawnLoc(),
                     Quaternion.identity);
                 enemiesSpawning.RemoveAt(0);
                 spawnTimer = spawnInterval;
@@ -40,6 +42,27 @@ public class WaveSpawner : MonoBehaviour
         {
             spawnTimer -= Time.fixedDeltaTime;
             waveTimer -= Time.fixedDeltaTime;
+        }
+    }
+
+    Vector3 FindSpawnLoc()
+    {
+        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+
+        float xLoc = Random.Range(-spawnRange, spawnRange) + spawnPoint.position.x;
+        float zLoc = Random.Range(-spawnRange, spawnRange) + spawnPoint.position.z;
+        float yLoc = spawnPoint.position.y;
+
+        Vector3 spawnPos = new Vector3(xLoc, yLoc, zLoc);
+
+        if (Physics.Raycast(spawnPos, Vector3.down, 5))
+        {
+            return spawnPos;
+        }
+        else
+        {
+            Debug.Log("Can't spawn, trying again!");
+            return FindSpawnLoc();
         }
     }
 

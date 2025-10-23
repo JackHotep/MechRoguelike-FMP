@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputManager : MonoBehaviour
 {
+    private PauseMenu pauseMenu;
+    
     [Header("Input Action Asset and Action Map Name")]
     [SerializeField] private InputActionAsset pControls;
     [SerializeField] private string actionMap = "Player Controls";
@@ -16,6 +18,7 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField] private string boost = "Boost";
     [SerializeField] private string leftShoot = "Left Shoot";
     [SerializeField] private string rightShoot = "Right Shoot";
+    [SerializeField] private string pause = "Pause";
 
     // Find actions on start
     private InputAction moveAct;
@@ -24,6 +27,7 @@ public class PlayerInputManager : MonoBehaviour
     private InputAction boostAct;
     private InputAction leftShootAct;
     private InputAction rightShootAct;
+    private InputAction pauseAct;
 
     private int attacking = 0;
     
@@ -36,6 +40,8 @@ public class PlayerInputManager : MonoBehaviour
     
     //public bool LeftShoot { get; private set; }
     //public bool RightShoot { get; private set; }
+    
+    public bool Pause { get; private set; }
     
     // Force script to be singleton for easy access
     public static PlayerInputManager Inst { get; private set; }
@@ -52,6 +58,7 @@ public class PlayerInputManager : MonoBehaviour
         boostAct = pControls.FindActionMap(actionMap).FindAction(boost);
         leftShootAct = pControls.FindActionMap(actionMap).FindAction(leftShoot);
         rightShootAct = pControls.FindActionMap(actionMap).FindAction(rightShoot);
+        pauseAct = pControls.FindActionMap(actionMap).FindAction(pause);
         InputRegistrar();
 
         DeviceRegister();
@@ -82,6 +89,19 @@ public class PlayerInputManager : MonoBehaviour
 
         rightShootAct.performed += RightAttackPerformed;
         rightShootAct.canceled += RightAttackCancelled;
+
+        pauseAct.performed += PauseActPerformed;
+        pauseAct.canceled += PauseActCancelled;
+    }
+
+    private void PauseActPerformed(InputAction.CallbackContext context)
+    {
+        pauseMenu.PauseCheck();
+    }
+
+    private void PauseActCancelled(InputAction.CallbackContext context)
+    {
+        
     }
 
     public int GetAttack()
@@ -117,6 +137,7 @@ public class PlayerInputManager : MonoBehaviour
         boostAct.Enable();
         leftShootAct.Enable();
         rightShootAct.Enable();
+        pauseAct.Enable();
 
         InputSystem.onDeviceChange += DeviceChange;
     }
@@ -129,6 +150,7 @@ public class PlayerInputManager : MonoBehaviour
         boostAct.Disable();
         leftShootAct.Disable();
         rightShootAct.Disable();
+        pauseAct.Disable();
 
         InputSystem.onDeviceChange -= DeviceChange;
     }
@@ -148,6 +170,7 @@ public class PlayerInputManager : MonoBehaviour
 
     private void Start()
     {
-        //Weapon weaponLeft = 
+        var pMenu = GameObject.FindWithTag("Pause Menu");
+        pauseMenu = pMenu.GetComponent<PauseMenu>();
     }
 }

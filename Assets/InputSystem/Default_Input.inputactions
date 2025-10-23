@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "Default_Input",
     "maps": [
         {
@@ -54,6 +55,15 @@
                     "name": "Left Shoot",
                     "type": "Button",
                     "id": "db6b593f-5a07-4786-9961-5e353e008783",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "36d5d451-cb16-4a06-9eba-6c108e24dd82",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -234,6 +244,28 @@
                     "processors": "",
                     "groups": ";MnK",
                     "action": "Left Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c658beb4-28c8-47df-b7fd-d50013bfc015",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";MnK",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd89de22-ae8d-4d66-9fdc-bb71bf1ac97a",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

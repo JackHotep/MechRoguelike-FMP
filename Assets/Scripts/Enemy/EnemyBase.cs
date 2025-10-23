@@ -14,13 +14,13 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     
     protected Transform leftWeaponSlot;
     protected Transform rightWeaponSlot;
-    protected LeftWeaponType weaponTypeLeft;
-    protected RightWeaponType weaponTypeRight;
-    protected List<Weapon> listWeaponsLeft;
-    protected List<Weapon> listWeaponsRight;
+    protected EnemyLeftWeaponType weaponTypeLeft;
+    protected EnemyRightWeaponType weaponTypeRight;
+    protected List<EnemyWeapon> listWeaponsLeft;
+    protected List<EnemyWeapon> listWeaponsRight;
     
-    public Weapon activeLeft;
-    public Weapon activeRight;
+    public EnemyWeapon activeLeft;
+    public EnemyWeapon activeRight;
     
     protected float stoppingDistance = 15f;
     protected float retreatDistance = 5f;
@@ -43,8 +43,8 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     {
         HealthCurrent = Health;
         ShieldCurrent = Shield;
-        Weapon slotL = listWeaponsLeft.Find(slotL => slotL.weaponTypeL == weaponTypeLeft);
-        Weapon slotR = listWeaponsRight.Find(slotR => slotR.weaponTypeR == weaponTypeRight);
+        EnemyWeapon slotL = listWeaponsLeft.Find(slotL => slotL.weaponTypeL == weaponTypeLeft);
+        EnemyWeapon slotR = listWeaponsRight.Find(slotR => slotR.weaponTypeR == weaponTypeRight);
         activeLeft = slotL;
         activeRight = slotR;
         slotL.Spawn(leftWeaponSlot, this);
